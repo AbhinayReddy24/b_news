@@ -10,7 +10,7 @@ interface NewsArticleEntryProps {
 
 const NewsArticleEntry = ({article : {title, description, url, urlToImage}}: NewsArticleEntryProps) => {
     
-    const validImageUrl = (urlToImage?.startsWith("http://") || urlToImage?.startsWith("https://")) ? urlToImage : undefined
+    const validImageUrl = (urlToImage?.startsWith("http://") || urlToImage?.startsWith("https://")) ? urlToImage : null
     
     return ( 
         <a href="url">
