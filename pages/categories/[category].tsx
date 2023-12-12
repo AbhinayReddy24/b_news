@@ -4,6 +4,7 @@ import exp from "constants";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { Alert } from "react-bootstrap";
 
 interface CategoryNewspageProps {
     newsArticles: NewsArticle[],
@@ -51,6 +52,9 @@ const CategoryNewspage = ({newsArticles} : CategoryNewspageProps) => {
         </Head>
             <main>
                 <h1>{title}</h1>
+                <Alert>
+                    this page uses <strong>get static props </strong> for very high loading speeds
+                </Alert>
                 <NewsArticlesGrid articles={newsArticles}/>
             </main>
         </>
